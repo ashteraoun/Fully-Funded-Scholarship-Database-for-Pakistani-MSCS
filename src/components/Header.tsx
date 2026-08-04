@@ -28,39 +28,39 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-emerald-950 text-white shadow-xl border-b border-emerald-800/50 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:h-16 sm:py-0">
           
           {/* Logo & Title */}
-          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setActiveView('reader')}>
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-900/40 border border-emerald-300/30">
+          <div className="flex items-center space-x-3 cursor-pointer min-w-0" onClick={() => setActiveView('reader')}>
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-900/40 border border-emerald-300/30 flex-shrink-0">
               <GraduationCap className="w-6 h-6 text-emerald-950" />
             </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-300 bg-emerald-900/80 px-2 py-0.5 rounded border border-emerald-700/50">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-1.5">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-emerald-300 bg-emerald-900/80 px-2 py-0.5 rounded border border-emerald-700/50">
                   Karachi MSCS Edition
                 </span>
-                <span className="text-xs text-emerald-200/80 font-medium hidden md:inline">
+                <span className="text-[10px] sm:text-xs text-emerald-200/80 font-medium hidden md:inline">
                   2027-2028 Cycle
                 </span>
               </div>
-              <h1 className="text-base sm:text-lg font-bold tracking-tight text-white line-clamp-1">
+              <h1 className="text-sm sm:text-lg font-bold tracking-tight text-white line-clamp-2 sm:line-clamp-1 break-words">
                 Ultimate Fully Funded Master's Scholarship Guide
               </h1>
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 w-full sm:w-auto">
             <button
               onClick={onExportPdf}
               disabled={isExporting}
-              className="flex items-center space-x-2 px-3.5 py-2 rounded-lg text-sm font-semibold text-emerald-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all duration-200 shadow-md shadow-emerald-950/50 hover:shadow-emerald-400/20 active:scale-95 disabled:opacity-50 cursor-pointer"
+              className="flex w-full sm:w-auto items-center justify-center space-x-2 px-3.5 py-2 rounded-lg text-sm font-semibold text-emerald-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all duration-200 shadow-md shadow-emerald-950/50 hover:shadow-emerald-400/20 active:scale-95 disabled:opacity-50 cursor-pointer"
               title="Download publication-quality PDF guide"
             >
               <Download className={`w-4 h-4 ${isExporting ? 'animate-bounce' : ''}`} />
-              <span className="hidden sm:inline">
+              <span className="sm:inline">
                 {isExporting ? 'Preparing PDF...' : 'Export Book PDF'}
               </span>
             </button>

@@ -58,9 +58,9 @@ export default function App() {
       />
 
       {/* Main View Area */}
-      <main className="flex-1 flex flex-col">
+      <main className="flex-1 flex flex-col min-w-0">
         {activeView === 'reader' && (
-          <div className="flex-1 flex flex-col lg:flex-row">
+          <div className="flex-1 flex flex-col lg:flex-row min-w-0">
             <Sidebar
               chapters={chaptersData}
               currentChapterId={currentChapterId}
