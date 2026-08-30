@@ -121,11 +121,11 @@ This application is designed as a **comprehensive digital guide** for Pakistani 
 ## 🎥 Demo
 
 <div align="center">
-  <img src="https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Application+Demo+Coming+Soon" alt="Demo Screenshot" width="80%" />
+  <img src="/src/demo.png" alt="Demo Screenshot" width="80%" />
   <br />
   <br />
   <a href="#">
-    <img src="/src/demo-2.png" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/Live_Demo-FF6B6B?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
 </div>
 
